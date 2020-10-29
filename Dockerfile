@@ -11,7 +11,7 @@ RUN npm install --silent
 
 WORKDIR /studio-frontend
 ENTRYPOINT cp -r /prebuilt/node_modules /studio-frontend/ && \
-    npm install && \
+    npm run prepare && \
     npm run start
 
 EXPOSE 18011
