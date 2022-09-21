@@ -33,8 +33,8 @@ npm-install-%: ## install specified % npm package on the studio-frontend contain
 
 from-scratch: ## start development environment from scratch
 	make down
-	docker rmi edxops/studio-frontend
-	docker build -t edxops/studio-frontend:latest --no-cache .
+	-docker rmi theun/studio-frontend
+	docker build -t theun/studio-frontend:latest --no-cache .
 	make up
 
 restart: ## bring container down and back up
